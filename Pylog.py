@@ -361,9 +361,9 @@ def open_browser(url: str) -> None:
 
 
 def main():
-    print("Log Analyzer running at http://localhost:8000")
-    threading.Timer(0.5, lambda: open_browser("http://localhost:8000")).start()
-    ThreadingHTTPServer(("127.0.0.1", 8000), RequestHandler).serve_forever()
+    print("Log Analyzer running at http://127.0.0.1:8000")
+    threading.Timer(0.5, lambda: open_browser("http://127.0.0.1:8000")).start()
+    ThreadingHTTPServer(("0.0.0.0", 8000), RequestHandler).serve_forever()
 
 
 if __name__ == "__main__":
